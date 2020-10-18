@@ -1,0 +1,38 @@
+<!--pages/matrix2/matrix2.wxml-->
+<view>请输入矩阵A的行数与列数：</view>
+<view class = "head" >
+    <input class="input" placeholder="行数"
+    bindinput ="RowInput1"/>
+    <input class="input" placeholder="列数"
+    bindinput ="ColumnInput1"/>
+</view>
+<view>请输入矩阵A数据（用空格分隔，按行输入）</view>
+<textarea class="inputmatrix" placeholder="矩阵A数据"
+bindinput ="MatrixInput1"/>
+
+<view>请输入矩阵B的行数与列数：</view>
+<view class = "head" >
+    <input class="input" placeholder="行数"
+    bindinput ="RowInput2"/>
+    <input class="input" placeholder="列数"
+    bindinput ="ColumnInput2"/>
+</view>
+<view>请输入矩阵B数据（用空格分隔，按行输入）</view>
+<textarea class="inputmatrix" placeholder="矩阵B数据"
+bindinput ="MatrixInput2"/>
+<view>矩阵A:{{matrixa}}</view>
+<view>矩阵B:{{matrixb}}</view>
+
+<view class="tabbar">
+		<view>
+				<button class="row" bindtap="Add">A + B</button>
+				<view class="result" wx:if="{{setshow1}}" >{{add_matrix}}</view>
+				<button class="row" bindtap="Sub">A - B</button>
+				<view class="result" wx:if="{{setshow2}}" >{{sub_matrix}}</view>
+				<button class="row" bindtap="Time">A x B</button>
+				<view class="result" wx:if="{{setshow3}}" >{{time_matrix}}</view>
+				<view class="row" wx:if="{{setc}}">
+						<input  class="input" placeholder="输入幂次"  bindinput ="PowerInput"/>
+				</view>
+		</view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/matrix/matrix.wxml-->
+
+
+<view class="content">
+
+<view>请输入矩阵的行数与列数：</view>
+<view class = "head" >
+    <input class="input" placeholder="行数"
+    bindinput ="RowInput"/>
+    <input class="input" placeholder="列数"
+    bindinput ="ColumnInput"/>
+</view>
+<view>请输入矩阵数据（用空格分隔，按行输入）</view>
+<textarea style="{{}}" class="inputmatrix" placeholder="矩阵数据"
+bindinput ="MatrixInput"/>
+
+<view>{{origin_matrix}}</view>
+<view>矩阵内容：{{test_matrix}}</view>
+
+
+
+<view class="tabbar">
+		<view>
+				<button  class="row" bindtap="Transpose">转置</button>
+				<view class="result" >{{trans_matrix}}</view>
+				<button class="row" bindtap="Inversion">求逆</button>
+				<view class="result" >{{inverse_matrix}}</view>
+				<button class="row" bindtap="Detaminate">行列式</button>
+				<view  class="result" wx:if="{{setdet}}">{{detaminate}}</view>
+				<button class="row" bindtap="SetPower">求幂</button>
+				<view  class="row" wx:if="{{setc}}">
+						<input  class="input2" placeholder="输入幂次"  bindinput ="PowerInput"/>
+				</view>
+ 				<view class="result">{{power_matrix}}</view>
+	</view>
+</view>
+</view>   

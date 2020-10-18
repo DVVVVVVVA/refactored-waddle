@@ -1,0 +1,43 @@
+.root{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  background-color:#394ca3;
+  
+}
+.scene{
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  flex-direction:column; 
+  z-index: 9999;
+}
+.theme{
+  margin-top:40rpx; 
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-left: 50rpx;
+}
+.title{
+  align-content: left;
+  font-size: 55rpx;
+  color: white;
+}
+.icon{
+  margin-top: 22rpx 
+}
+.text-view{
+  width: 80%;
+}
+.view-contact{
+  
+}
+
+.main-text{
+  color: white;
+  font-size: 18px;
+}
+
+

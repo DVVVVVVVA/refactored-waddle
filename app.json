@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calc/calc",
+    "pages/history/history",
+    "pages/about/about",
+    "pages/algorithm/algorithm",
+    "pages/calculate/calculate",
+    "pages/introduce/introduce",
+    "pages/history1/history1",
+    "pages/logs/logs",
+    "pages/financecal/financecal",
+    "pages/finance/finance",
+    "pages/mortgage/mortgage",
+    "pages/finance/func/func",
+    "pages/wuxian-yijin/wxyj",
+    "pages/mortgage/detail/detail",
+    "pages/mj/mj",
+    "pages/mj/tb/tb",
+    "pages/mj/mt/mt",
+    "pages/sport/sport",
+    "pages/matrix/matrix",
+    "pages/matrix2/matrix2",
+    "pages/indexgpa/indexgpa"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#da7c0c",
+    "navigationBarTitleText": "生活计算助手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "科学计算器"
+      },
+      {
+        "pagePath": "pages/financecal/financecal",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "金融计算器"
+      },
+      {
+        "pagePath": "pages/mj/mj",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "满减计算器"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "usingComponents":{
+    "van-button": "vant-weapp/button",
+    "van-radio": "vant-weapp/radio",
+    "van-radio-group": "vant-weapp/radio-group",
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col",
+    "van-icon": "vant-weapp/icon"
+  }
+}

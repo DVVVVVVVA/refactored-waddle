@@ -1,0 +1,49 @@
+/* pages/matrix2/matrix2.wxss */
+
+.row{
+  justify-content: center;
+  width: 300rpx;
+  position: relative;
+  display: flex;
+}
+.tabbar{
+     display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  background-color: #FBFBEA;
+  width: auto;
+}
+
+.head{  display: flex;
+  float: row;
+  justify-content: center;
+}
+.input{
+  width: 150px;
+  height: 30px;
+  border: 1px solid lightslategray;
+  border-radius: 25px;
+  text-align: center;
+  text-justify: auto;
+  font-size: 30rpx;
+}
+.inputmatrix{
+  width: auto;
+  height: 30px;
+  border: 1px solid lightslategray;
+  border-radius: 25px;
+  text-align: center;
+  text-justify: auto;
+  font-size: 30rpx;
+}
