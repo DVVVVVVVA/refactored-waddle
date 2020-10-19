@@ -112,8 +112,36 @@ Page({
       course.forEach(function(value, index, array) {
         var grade = parseFloat(value.grade)
         var credit = parseFloat(value.credit)
-        if (grade >= 60)
-          sumGPA = sumGPA + (grade / 10 - 5) * credit
+        if(grade >= 90 & grade <=100){
+          sumGPA = sumGPA + 4.0 * credit
+        }
+        else if(grade >=85 & grade <90){
+          sumGPA = sumGPA + 3.7 * credit
+        }
+        else if(grade >=82 & grade <85){
+          sumGPA = sumGPA + 3.3 * credit
+        }
+        else if(grade >=78 & grade <82){
+          sumGPA = sumGPA + 3.0 * credit
+        }
+        else if(grade >=75 & grade <78){
+          sumGPA = sumGPA + 2.7 * credit
+        }
+        else if(grade >=72 & grade <75){
+          sumGPA = sumGPA + 2.3 * credit
+        }
+        else if(grade >=68 & grade <72){
+          sumGPA = sumGPA + 2.0 * credit
+        }
+        else if(grade >=64 & grade <68){
+          sumGPA = sumGPA + 1.7 * credit
+        }
+        else if(grade >=60 & grade <64){
+          sumGPA = sumGPA + 10 * credit
+        }
+        else if(grade <60){
+          sumGPA = sumGPA + 0
+        }
         sumCredit = sumCredit + credit
         if (username == "" || value.name == "" || value.grade == "" || grade < 0 || grade > 100 || value.credit == "" || credit < 0 || credit > 10) {
           flag = false;

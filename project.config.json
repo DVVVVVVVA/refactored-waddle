@@ -28,6 +28,7 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -37,7 +38,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.1",
-  "appid": "wx0cc42ec48399d6c0",
+  "appid": "wx8aa72160614e529c",
   "projectname": "miniprogram-6",
   "debugOptions": {
     "hidedInDevtools": []

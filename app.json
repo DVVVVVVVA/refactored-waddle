@@ -37,20 +37,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/icon_component.png",
-        "selectedIconPath": "image/icon_component_HL.png",
+        "iconPath": "image/V.png",
+        "selectedIconPath": "image/V-2.png",
         "text": "科学计算器"
       },
       {
         "pagePath": "pages/financecal/financecal",
-        "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
+        "iconPath": "image/jinrong.png",
+        "selectedIconPath": "image/jinrong-2.png",
         "text": "金融计算器"
       },
       {
         "pagePath": "pages/mj/mj",
-        "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
+        "iconPath": "image/jinrongfuwu-2.png",
+        "selectedIconPath": "image/jinrongfuwu.png",
         "text": "满减计算器"
       }
     ]

@@ -30,7 +30,7 @@
       <text>姓名：{{username}}</text>
     </view>
     <view class="view-GPA">
-      <text>平均学分绩点：{{avgGPA}}/5</text>
+      <text>平均学分绩点：{{avgGPA}}/4</text>
     </view>
     <view class="view-itemTitle">
       <van-row>

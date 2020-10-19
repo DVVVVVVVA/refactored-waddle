@@ -1,0 +1,2 @@
+/* pages/matrix/matrix.wxss */
+.head{  display: flex;}
