@@ -2,36 +2,44 @@
 
 
 <view class="content">
-
-<view>请输入矩阵的行数与列数：</view>
-<view class = "head" >
+<i-panel title="请输入矩阵的行数与列数：" >
+<view class = "head" style="background: #f8f8f9">
     <input class="input" placeholder="行数"
-    bindinput ="RowInput"/>
+		bindinput ="RowInput"/>
     <input class="input" placeholder="列数"
     bindinput ="ColumnInput"/>
 </view>
-<view>请输入矩阵数据（用空格分隔，按行输入）</view>
-<textarea style="{{}}" class="inputmatrix" placeholder="矩阵数据"
-bindinput ="MatrixInput"/>
+</i-panel>
 
-<view>{{origin_matrix}}</view>
-<view>矩阵内容：{{test_matrix}}</view>
+<i-panel title="请输入矩阵数据:(用空格分隔，按行输入)" >
+<view style="background: #f8f8f9">
+<textarea  class="inputmatrix" placeholder="矩阵数据"
+bindinput ="MatrixInput"/>
+</view>
+</i-panel>
+
+
+<i-cell-group >
+	<view style="background: #f8f8f9;font-weight:500">
+    <i-cell title="输入内容：{{origin_matrix}}" ></i-cell>
+		<i-cell title="矩阵内容：{{test_matrix}}" ></i-cell>
+	</view>
+</i-cell-group>
 
 
 
 <view class="tabbar">
-		<view>
-				<button  class="row" bindtap="Transpose">转置</button>
-				<view class="result" >{{trans_matrix}}</view>
-				<button class="row" bindtap="Inversion">求逆</button>
-				<view class="result" >{{inverse_matrix}}</view>
-				<button class="row" bindtap="Detaminate">行列式</button>
-				<view  class="result" wx:if="{{setdet}}">{{detaminate}}</view>
-				<button class="row" bindtap="SetPower">求幂</button>
-				<view  class="row" wx:if="{{setc}}">
-						<input  class="input2" placeholder="输入幂次"  bindinput ="PowerInput"/>
-				</view>
- 				<view class="result">{{power_matrix}}</view>
+
+			<i-button bind:click="Transpose" type="primary" size="small">转置</i-button>
+			<view class="result" >{{trans_matrix}}</view>
+			<i-button bind:click="Inversion" type="primary" size="small">求逆</i-button>
+			<view class="result" >{{inverse_matrix}}</view>
+			<i-button bind:click="Detaminate" type="primary" size="small">行列式</i-button>
+			<view  class="result" wx:if="{{setdet}}">{{detaminate}}</view>
+			<i-button bind:click="SetPower" type="primary" size="small">求幂</i-button>
+	<view   wx:if="{{setc}}">
+						<input  class="input2" placeholder="输入幂次"  bindinput ="PowerInput"/> 
 	</view>
+	<view class="result">{{power_matrix}}</view>
 </view>
 </view>   

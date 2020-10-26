@@ -43,7 +43,7 @@ Page({
     idlk:"(",
     idrk:")",
     navState:0,
-    precise:-1,
+    precise:6,
     screenData:"0",
     operaSymbo:{"+":"+","-":"-","×":"*","÷":"/",".":"."},
     lastIsOperaSymbo:false,

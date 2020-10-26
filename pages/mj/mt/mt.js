@@ -22,48 +22,51 @@ Page({
       mincost:0,
       yj:0,
       maxdiscount:10,
-      digit:[1, 2, 3, 4, 5],
       digitIndex: 0,
       minresult:"",
-      maxresult:""
+      maxresult:"",
+      wmkdigit:0,
+      mjhbdigit:0,
+      yhspdigit:0
     },
   
     dInput:function(e){
-      this.data.delivery=e.detail.value
+      this.data.delivery=e.detail.detail.value
   
     },
     wmk1Input:function(e){
-      this.data.wmk_for[e.currentTarget.dataset.index]=e.detail.value
+      this.data.wmk_for[e.currentTarget.dataset.index]=e.detail.detail.value
   
     },
     mInput:function(e){
-      this.data.mj_for[e.currentTarget.dataset.index].m=e.detail.value
+      this.data.mj_for[e.currentTarget.dataset.index].m=e.detail.detail.value
+  
   
     },
     
     jInput:function(e){
       
-      this.data.mj_for[e.currentTarget.dataset.index].j=e.detail.value
+      this.data.mj_for[e.currentTarget.dataset.index].j=e.detail.detail.value
   
     },
     bmInput:function(e){
-      this.data.mjhb_for[e.currentTarget.dataset.index].m=e.detail.value
+      this.data.mjhb_for[e.currentTarget.dataset.index].m=e.detail.detail.value
   
     },
     
     bjInput:function(e){
       
-      this.data.mjhb_for[e.currentTarget.dataset.index].j=e.detail.value
+      this.data.mjhb_for[e.currentTarget.dataset.index].j=e.detail.detail.value
   
     },
     yjInput:function(e){
-      this.data.yhsp_for[e.currentTarget.dataset.index].yj=e.detail.value
+      this.data.yhsp_for[e.currentTarget.dataset.index].yj=e.detail.detail.value
   
     },
     
     xjInput:function(e){
       
-      this.data.yhsp_for[e.currentTarget.dataset.index].xj=e.detail.value
+      this.data.yhsp_for[e.currentTarget.dataset.index].xj=e.detail.detail.value
   
     },
 
@@ -71,14 +74,14 @@ Page({
       
       var length=this.data.mj_for.length;
       var tmp=this.data.mj_for;
-      if (length<this.data.digit[e.detail.value])
-      for(var i=length;i<this.data.digit[e.detail.value];i++)
+      if (length<e.detail.value)
+      for(var i=length;i<e.detail.value;i++)
       {
         tmp[i]={"m":0,"j":0}
       }
       else 
       {
-        tmp=tmp.slice(0,this.data.digit[e.detail.value])
+        tmp=tmp.slice(0,e.detail.value)
       }
       this.setData({
        mj_for:tmp,
@@ -96,10 +99,11 @@ Page({
       }
       else 
       {
-        tmp=tmp.slice(0,e.detail.value-1)
+        tmp=tmp.slice(0,e.detail.value)
       }
       this.setData({
-      wmk_for:tmp
+      wmk_for:tmp,
+      wmkdigit:e.detail.value
       })
     },
     mjhbInput:function(e){
@@ -113,10 +117,11 @@ Page({
       }
       else 
       {
-        tmp=tmp.slice(0,e.detail.value-1)
+        tmp=tmp.slice(0,e.detail.value)
       }
       this.setData({
-       mjhb_for:tmp
+       mjhb_for:tmp,
+       mjhbdigit:e.detail.value
       })
     },
     yhspInput:function(e){
@@ -130,10 +135,11 @@ Page({
       }
       else 
       {
-        tmp=tmp.slice(0,e.detail.value-1)
+        tmp=tmp.slice(0,e.detail.value)
       }
       this.setData({
-       yhsp_for:tmp
+       yhsp_for:tmp,
+       yhspdigit:e.detail.value
       })
     },
     mincost:function(){

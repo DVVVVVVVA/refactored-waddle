@@ -7,7 +7,7 @@
 <view class="divLine"></view>
 <view style="display: flex;justify-content: center">请选择性别</view>
 <view style="display:flex">
-    <button class="{{sex==male? 'checked':''}}" style="width:30%;border: 1px solid #70bcf6; border-radius: 2px;"
+    <button class="{{sex==male? 'checked':''}}" style="width:30%;border: 1px solid #70bcf6; border-radius: 2px;  "
     bindtap = "SetMale">男</button>
     <button class="{{sex==female? 'checked':''}}" style="width:30%;border: 1px solid #70bcf6; border-radius: 2px;" 
     bindtap = "SetFemale">女</button>

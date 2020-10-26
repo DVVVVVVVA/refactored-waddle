@@ -1,7 +1,10 @@
 /* pages/matrix/matrix.wxss */
 .head{  display: flex;}
 .divLine{
-  background: #336699;
+  background: #dddee1;
   width: 100%;
   height: 2rpx;
+ }
+ page{
+  background-color: #f0f0f0a2;
  }

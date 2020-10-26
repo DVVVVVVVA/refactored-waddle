@@ -2,61 +2,63 @@
 
 
 
-<view>请输入满减优惠数目：<picker bindchange="mjInput" value="0" range="{{digit}}">{{digit[digitIndex]}}</picker> </view>
+<i-panel title="请输入满减优惠数目：">
+    <view style="padding: 16px; background: #f8f8f9">
+        <i-input-number value="{{digitIndex}}" min="0" max="9" bindchange="mjInput" />
+    </view>
+</i-panel>
 <view class = "head" wx:for='{{mj_for}}' wx:for-index="index" wx>
-		满
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="mInput"/>
-		减
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="jInput"/>
+
+		<i-input title="满" data-index="{{index}}" bind:change="mInput" placeholder="金额" maxlength="5" />
+		<i-input title="减" data-index="{{index}}" bind:change="jInput" placeholder="金额" maxlength="5" />
 </view>
 <view class="divLine"></view>
-<view>请输入可用无门槛红包数目：<input class="input" placeholder="输入数目"
-		bindinput ="wmkInput"/> </view>
-<view class = "head" wx:for='{{wmk_for}}' wx:for-index="index" wx>
-		红包金额:
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="wmk1Input"/>
+<i-panel title="请输入可用无门槛红包数目：">
+    <view style="padding: 16px; background: #f8f8f9">
+        <i-input-number value="{{wmkdigit}}" min="0" max="9" bindchange="wmkInput"/>
+    </view>
+</i-panel>
+<view  wx:for='{{wmk_for}}' wx:for-index="index" wx>
+		<i-input title="红包金额:" data-index="{{index}}" bind:change="wmk1Input" placeholder="金额" maxlength="5" />
 </view>
 <view class="divLine"></view>
-<view>请输入满减优惠券数目：<input class="input" placeholder="输入数目"
-		bindinput ="mjhbInput"/> </view>
+<i-panel title="请输入满减优惠券数目：">
+    <view style="padding: 16px; background: #f8f8f9">
+        <i-input-number value="{{mjhbdigit}}" min="0" max="9" bindchange="mjhbInput"/>
+    </view>
+</i-panel>
 <view class = "head" wx:for='{{mjhb_for}}' wx:for-index="index" wx>
-		满
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="bmInput"/>
-		减
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="bjInput"/>
+		<i-input title="满" data-index="{{index}}" bind:change="bmInput" placeholder="金额" maxlength="5" />
+		<i-input title="减" data-index="{{index}}" bind:change="bjInput" placeholder="金额" maxlength="5" />
 </view>
 <view class="divLine"></view>
-<view>请输入优惠套餐(不与满减优惠通用)：<input class="input" placeholder="输入数目"
-		bindinput ="yhspInput"/> </view>
+
+<i-panel title="请输入优惠套餐(不与满减优惠通用)">
+    <view style="padding: 16px; background: #f8f8f9">
+        <i-input-number value="{{yhspdigit}}" min="0" max="9" bindchange="yhspInput"/>
+    </view>
+</i-panel>
+
 <view class = "head" wx:for='{{yhsp_for}}' wx:for-index="index" wx>
-		原价
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="yjInput"/>
-		优惠价
-    <input class="input" placeholder="输入金额" data-index="{{index}}"
-		bindinput ="xjInput"/>
+		<i-input title="原价" data-index="{{index}}" bind:change="yjInput" placeholder="金额" maxlength="5" />
+		<i-input title="优惠价" data-index="{{index}}" bind:change="xjInput" placeholder="金额" maxlength="5" />
 </view>
 <view class="divLine"></view>
-<view>请输入配送费：<input class="input" placeholder="输入数目"
-		bindinput ="dInput"/> </view>
+<i-panel title="请输入配送费：">
+<i-input  data-index="{{index}}" bind:change="dInput" placeholder="金额" maxlength="5" />
+</i-panel>
 		<view class="divLine"></view>
 
 
-<view>最小开销：{{mincost}}</view>
-<view>最大折扣：{{maxdiscount*10}}折</view>
-
+		<i-notice-bar>最小开销：{{mincost}}</i-notice-bar>
+		<i-notice-bar>最大折扣：{{maxdiscount*10}}折</i-notice-bar>
 
 
 <view class="tabbar">
 		<view class="row">
-			<button bindtap="mincost">求最少开销</button>
+			<i-button bind:click="mincost" type="primary" size="default">求最少开销</i-button>
 			<view>{{minresult}}</view>
-			<button bindtap="maxdiscount">求最大折扣</button>
+			<i-button bind:click="maxdiscount" type="primary" size="default">求最大折扣</i-button>
 			<view>{{maxresult}}</view>
 		</view>
 </view>

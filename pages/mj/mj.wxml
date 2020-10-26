@@ -8,13 +8,13 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
-
-	<button class="btn" bindtap="tomt" ><image  mode='scaleToFill' plain='true' class='image' src="/image/mt_icon.png"></image></button>
+  <button class="btn" bindtap="tomt" ><image  mode='scaleToFill' plain='true' class='image' src="/image/mt_icon.png"></image></button>
   <view>
     <navigator url="view" class="github" hover-class="navigator-hover">
       <icon type="{{iconType}}" class="icon" size="20"/>GitHub
     </navigator>
   </view>
 </view>
+
 	
 </view>

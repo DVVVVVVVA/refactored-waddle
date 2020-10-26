@@ -11,18 +11,18 @@
 }
 .tabbar{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;  
 }
 .content{
-  background-color:#F1FAFA;
+  background-color:#f8f8f9  ;
 }
 .result{
   display: flex;
   flex-direction: column;
   justify-content: center;  
   align-items: center;
-  background-color: #FBFBEA;
+  background-color: #f8f8f9  ;
   width: auto;
 }
 .input{
@@ -36,8 +36,7 @@
 }
 
 .input2{
-  display: flex;
-  width: 150px;
+
   height: 30px;
   border: 1px solid lightslategray;
   border-radius: 25px;

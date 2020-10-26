@@ -9,15 +9,12 @@
   </view>
   <view class="usermotto">
     <!--<text class="user-motto">{{motto}}</text>-->
-    <button type="default" size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover"
-        disabled="{{disabled}}" bindtap="tofinance"> {{motto1}}
-    </button>
-    <button type="default" size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover"
-        disabled="{{disabled}}" bindtap="tomortgage"> {{motto2}} 
-    </button>
-    <button type="default" size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover"
-        disabled="{{disabled}}" bindtap="towuxianyijin"> {{motto3}} 
-    </button>
+    <i-button bind:click="tofinance"  size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover"
+        disabled="{{disabled}}" type="info" shape="circle" size="small">{{motto1}}</i-button>
+    <i-button bind:click="tomortgage"  size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover"
+        disabled="{{disabled}}" type="info" shape="circle" size="small">{{motto2}}</i-button>
+    <i-button bind:click="towuxianyijin"  size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover" disabled="{{disabled}}" type="info" shape="circle" size="small">{{motto3}}</i-button>
+
   </view>
   <view>
     <navigator url="view" class="github" hover-class="navigator-hover">
